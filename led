@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LUNA LED Effect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .led-text {
+            font-size: 18vw; /* responsive size */
+            font-weight: bold;
+            letter-spacing: 1vw;
+            color: white;
+            text-shadow:
+                0 0 10px #ff0000,
+                0 0 20px #ff0000,
+                0 0 30px #ff0000,
+                0 0 40px #ff0000;
+            animation: glow 3s infinite linear;
+        }
+
+        @keyframes glow {
+            0% { color: red; text-shadow: 0 0 20px red, 0 0 40px red; }
+            25% { color: orange; text-shadow: 0 0 20px orange, 0 0 40px orange; }
+            50% { color: lime; text-shadow: 0 0 20px lime, 0 0 40px lime; }
+            75% { color: cyan; text-shadow: 0 0 20px cyan, 0 0 40px cyan; }
+            100% { color: magenta; text-shadow: 0 0 20px magenta, 0 0 40px magenta; }
+        }
+    </style>
+</head>
+<body>
+    <div class="led-text">LUNA</div>
+</body>
+</html>
